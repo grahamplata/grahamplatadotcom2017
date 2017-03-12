@@ -17,13 +17,10 @@ const forceSSL = function () {
   }
 }
 
-//enviroment key
-var key = process.env.TWITCH_API_KEY;
-
 // Instruct the app
 // to use the forceSSL
 // middleware
-app.use(forceSSL());
+//app.use(forceSSL());
 
 // Run the app by serving the static files
 // in the dist directory
