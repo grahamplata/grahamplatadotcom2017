@@ -1,21 +1,13 @@
-<div class="tile is-parent">
+<div *ngIf="repos" class="tile is-parent">
   <article class="tile is-child box">
-
     <p class="title">Recent Projects...</p>
     <p class="subtitle">Github</p>
-    <p href="#"><strong>Twitch Stream Search</strong></p>
-    <p>This project was an exercise in api useage with Angular2+ Express and the twitch.tv API</p>
-    <hr>
-    <p href="#"><strong>Project Euler</strong></p>
-    <p>Working through questions on ProjectEuler</p>
-    <hr>
-    <p href="#"><strong>Ionic Weather Exercise</strong></p>
-    <p>Ionic app to familiarize with the platform</p>
-    <hr>
-    <p href="#"><strong>Waiv Api</strong></p>
-    <p>Waiver API Express Backend</p>
-    <hr>
-    <p href="#"><strong>Angular Tesla Range Calculator</strong></p>
-    <p>Tesla Calculator Tutorial from toddmotto</p>
+    <div *ngFor="let repo of repos; let i = index;">
+      <div *ngIf="i < 4">
+        <p class="subtitle"><a href="{{repo.html_url}}"> {{repo.name}}</a></p>
+        <p>{{repo.description}}</p>
+        <hr>
+      </div>
+    </div>
   </article>
 </div>

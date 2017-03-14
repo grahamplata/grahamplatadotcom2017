@@ -2,8 +2,7 @@ const path = require('path');
 const express = require('express');
 const app = express();
 const request = require('request');
-var dotenv = require('dotenv');
-dotenv.load();
+
 // If an incoming request uses
 // a protocol other than HTTPS,
 // redirect that request to the
@@ -32,6 +31,7 @@ app.use(express.static(__dirname + '/dist'));
 app.get('/*', function (req, res) {
   res.sendFile(path.join(__dirname + '/dist/index.html'));
 });
+
 
 // Start the app by listening on the default
 // Heroku port
