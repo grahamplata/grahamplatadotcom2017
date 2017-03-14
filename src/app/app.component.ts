@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { ContactComponent } from '../app/contact/contact.component';
 
 @Component({
   selector: 'app-root',
@@ -7,5 +6,4 @@ import { ContactComponent } from '../app/contact/contact.component';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app works!';
 }
